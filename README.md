@@ -177,17 +177,3 @@ Es normal la primera vez — dale "Permitir acceso" (solo afecta a redes locales
 servidor sigue sin ser accesible desde internet).
 
 ---
-
-## 8. Nota sobre lo que NO se sube a GitHub (y por qué)
-
-Estos archivos/carpetas están en `.gitignore` a propósito — no es un error si no los
-ves después de clonar:
-
-- **`.venv/`** — el entorno de Python es específico de cada máquina, se recrea con el
-  paso 4.
-- **`tickets.db`** — la base de datos se genera sola en el primer arranque; así cada
-  quien empieza con datos limpios en su propio equipo.
-- **`__pycache__/`** y **`*.pyc`** — archivos temporales de Python, se regeneran solos.
-
-Si alguien clona el repo y ve que faltan estas cosas, es el comportamiento esperado —
-solo tiene que seguir los pasos 4 y 5 de esta guía.
