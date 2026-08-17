@@ -1,0 +1,11 @@
+{
+  "_comment": "Comercios ficticios (para el prototipo, sin datos reales) con su tipo. El tipo se usa para las reglas de asignacion de responsable en classifier/routing.py, siguiendo la logica real descrita por soporte: Nivel 2 educativo distinto de Nivel 2 cooperativas, PM distinto por tipo de comercio para Requerimientos.",
+  "comercios": [
+    {"nombre": "Universidad Ejemplo", "tipo": "educativo"},
+    {"nombre": "Instituto Técnico Modelo", "tipo": "educativo"},
+    {"nombre": "Politécnico Central", "tipo": "educativo"},
+    {"nombre": "Corporación Educativa Andina", "tipo": "educativo"},
+    {"nombre": "Cooperativa Ejemplo", "tipo": "cooperativo"},
+    {"nombre": "Fondo Solidario Ejemplo", "tipo": "cooperativo"}
+  ]
+}

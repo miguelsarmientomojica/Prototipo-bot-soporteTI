@@ -1,0 +1,582 @@
+[
+  {
+    "id": 1001,
+    "subject": "Cambio No. Documento Estudiante",
+    "requester": {
+      "id": 501,
+      "title": "Laura Fernanda Gómez",
+      "email": "laura.gomez@ejemplo-edu.co",
+      "role": "Member"
+    },
+    "status": "Nuevo",
+    "category": null,
+    "priority": "Normal",
+    "tags": [
+      {
+        "title": "UniversidadEjemplo",
+        "id": 1
+      }
+    ],
+    "firstComment": "<div>Buen dia soporte.</div><div>Solicito su colaboracion modificando el No. Documento del estudiante a CC 1098765432, solicitud 30250001122.</div><div>No firma garantias, se puede realizar la modificacion.</div><div>Cordialmente.</div>"
+  },
+  {
+    "id": 1002,
+    "subject": "Crear Usuario",
+    "requester": {
+      "id": 502,
+      "title": "Andres Felipe Rojas",
+      "email": "arojas@cooperativa-ejemplo.coop",
+      "role": "End-User"
+    },
+    "status": "Resuelto",
+    "category": "Pedido",
+    "priority": "Normal",
+    "tags": [
+      {
+        "title": "CooperativaEjemplo",
+        "id": 2
+      }
+    ],
+    "firstComment": "<div>Cordial saludo,</div><div>Solicito crear el siguiente usuario: Primer nombre: Sofia, Apellido: Martinez, Tipo de documento: CC, Numero: 52334455, Correo: smartinez@cooperativa-ejemplo.coop, Rol: Agente SAC.</div>"
+  },
+  {
+    "id": 1003,
+    "subject": "Urgente - Cambio estado solicitud 30250003399",
+    "requester": {
+      "id": 503,
+      "title": "Camilo Torres",
+      "email": "camilo.torres@ejemplo-edu.co",
+      "role": "Member"
+    },
+    "status": "Nuevo",
+    "category": null,
+    "priority": "Normal",
+    "tags": [],
+    "firstComment": "<div>Buen dia soporte.</div><div>Solicito cambio de estado de la solicitud 30250003399 a FINANCIACION LEGALIZADA, no requiere renovacion.</div><div>Cordialmente.</div>"
+  },
+  {
+    "id": 1004,
+    "subject": "Consulta estado de mi solicitud",
+    "requester": {
+      "id": 504,
+      "title": "Diana Marcela Ruiz",
+      "email": "druiz@correo-ejemplo.com",
+      "role": "End-User"
+    },
+    "status": "Nuevo",
+    "category": null,
+    "priority": "Normal",
+    "tags": [
+      {
+        "title": "UniversidadEjemplo",
+        "id": 1
+      }
+    ],
+    "firstComment": "<div>Hola, buenas tardes.</div><div>Queria preguntar en que estado va mi solicitud de credito educativo, la radique hace 2 semanas y no he recibido novedades.</div><div>Gracias.</div>"
+  },
+  {
+    "id": 1005,
+    "subject": "Error al subir documento de identidad",
+    "requester": {
+      "id": 505,
+      "title": "Julian David Peña",
+      "email": "jpena@correo-ejemplo.com",
+      "role": "End-User"
+    },
+    "status": "Nuevo",
+    "category": null,
+    "priority": "Normal",
+    "tags": [
+      {
+        "title": "CooperativaEjemplo",
+        "id": 2
+      }
+    ],
+    "firstComment": "<div>Buenas, al intentar subir mi cedula escaneada en el paso 3 del formulario me sale un error y no me deja continuar. Ya intente con otro navegador y me pasa lo mismo. Adjunto pantallazo.</div>"
+  },
+  {
+    "id": 1006,
+    "subject": "Plataforma caida - varios usuarios afectados",
+    "requester": {
+      "id": 506,
+      "title": "Coordinador Comercial Ejemplo",
+      "email": "coordinador@ejemplo-edu.co",
+      "role": "Member"
+    },
+    "status": "Nuevo",
+    "category": null,
+    "priority": "Normal",
+    "tags": [],
+    "firstComment": "<div>Buen dia, nos estan reportando desde varias sedes que la plataforma de radicacion no carga desde hace 40 minutos. Ya son mas de 10 solicitantes afectados en Universidad Ejemplo y Cooperativa Ejemplo. Por favor revisar con urgencia, esto esta bloqueando todas las radicaciones del dia.</div>"
+  },
+  {
+    "id": 1007,
+    "subject": "Solicitud de nueva funcionalidad - firma digital",
+    "requester": {
+      "id": 507,
+      "title": "Julian PM Ejemplo",
+      "email": "julian.pm@ejemplo-edu.co",
+      "role": "Member"
+    },
+    "status": "Nuevo",
+    "category": null,
+    "priority": "Normal",
+    "tags": [
+      {
+        "title": "UniversidadEjemplo",
+        "id": 1
+      }
+    ],
+    "firstComment": "<div>Buenas, desde Universidad Ejemplo nos solicitan que el proceso de firma de garantias se pueda hacer con firma digital, hoy no existe esa opcion en la plataforma y todos firman fisico. Adjunto el formato de requerimiento con el detalle funcional solicitado.</div>"
+  },
+  {
+    "id": 1008,
+    "subject": "Undeliverable: Mail delivery failed",
+    "requester": {
+      "id": 508,
+      "title": "Mailer Daemon",
+      "email": "noreply@mailserver-ejemplo.com",
+      "role": "End-User"
+    },
+    "status": "Nuevo",
+    "category": null,
+    "priority": "Normal",
+    "tags": [],
+    "firstComment": "<div>This is an automatically generated message. Delivery has failed to these recipients: destinatario@ejemplo.com. The following organization rejected your message.</div>"
+  },
+  {
+    "id": 1009,
+    "subject": "Ajuste de fecha de pago primera cuota",
+    "requester": {
+      "id": 509,
+      "title": "Paula Andrea Sanchez",
+      "email": "paula.sanchez@cooperativa-ejemplo.coop",
+      "role": "Member"
+    },
+    "status": "Nuevo",
+    "category": null,
+    "priority": "Normal",
+    "tags": [
+      {
+        "title": "CooperativaEjemplo",
+        "id": 2
+      }
+    ],
+    "firstComment": "<div>Buen dia, favor ajustar la fecha de pago de la primera cuota de la solicitud 30250004410, el asociado solicita que quede para el dia 15 en vez del dia 5, ya que asi le coincide con el pago de nomina.</div>"
+  },
+  {
+    "id": 1010,
+    "subject": "No me deja avanzar en el formulario",
+    "requester": {
+      "id": 510,
+      "title": "Esteban Ariza",
+      "email": "esteban.ariza@correo-ejemplo.com",
+      "role": "End-User"
+    },
+    "status": "Nuevo",
+    "category": null,
+    "priority": "Normal",
+    "tags": [
+      {
+        "title": "UniversidadEjemplo",
+        "id": 1
+      }
+    ],
+    "firstComment": "<div>Hola, llevo desde ayer intentando terminar mi solicitud pero el boton de siguiente no responde en el paso de datos financieros. Ya revise que todos los campos esten llenos. Necesito terminar esto antes del viernes porque se cierra el periodo de matriculas.</div>"
+  },
+  {
+    "id": 1011,
+    "subject": "Solicitud de reporte mensual de cartera",
+    "requester": {
+      "id": 511,
+      "title": "Jenny PM Cooperativas",
+      "email": "jenny.pm@ejemplo.co",
+      "role": "Member"
+    },
+    "status": "Nuevo",
+    "category": null,
+    "priority": "Normal",
+    "tags": [
+      {
+        "title": "CooperativaEjemplo",
+        "id": 2
+      }
+    ],
+    "firstComment": "<div>Buenas, quisiera saber si es posible generar un reporte automatico mensual con el estado de cartera de las solicitudes de Cooperativa Ejemplo, hoy tenemos que pedirlo manualmente cada mes. Si esto no existe actualmente como funcionalidad, nos gustaria dejarlo como solicitud formal de desarrollo.</div>"
+  },
+  {
+    "id": 1012,
+    "subject": "RE: RE: Fwd: Confirmacion",
+    "requester": {
+      "id": 512,
+      "title": "Sistema Notificaciones",
+      "email": "sistema@notificaciones-ejemplo.com",
+      "role": "End-User"
+    },
+    "status": "Nuevo",
+    "category": null,
+    "priority": "Normal",
+    "tags": [],
+    "firstComment": "<div>Excepcion no controlada en el modulo de notificaciones: NullReferenceException at line 245. Este es un correo generado automaticamente por el sistema de monitoreo.</div>"
+  },
+  {
+    "id": 2001,
+    "subject": "Cambio de estado de solicitud",
+    "requester": {
+      "id": 2001,
+      "title": "Sofía Martínez",
+      "email": "smartinez@correo-ejemplo.com",
+      "role": "End-User"
+    },
+    "status": "Nuevo",
+    "category": null,
+    "priority": "Normal",
+    "tags": [
+      {
+        "title": "CooperativaEjemplo",
+        "id": 2001
+      }
+    ],
+    "firstComment": "<div>Buen dia, solicito cambio de estado de la solicitud 3025002679 a FINANCIACION LEGALIZADA, no requiere renovacion.</div><div>Cordialmente.</div>"
+  },
+  {
+    "id": 2002,
+    "subject": "Solicitud de nueva funcionalidad - firma digital",
+    "requester": {
+      "id": 2002,
+      "title": "Camila Herrera",
+      "email": "cherrera@correo-ejemplo.com",
+      "role": "End-User"
+    },
+    "status": "Nuevo",
+    "category": null,
+    "priority": "Normal",
+    "tags": [
+      {
+        "title": "UniversidadEjemplo",
+        "id": 2002
+      }
+    ],
+    "firstComment": "<div>Buenas, desde Universidad Ejemplo nos solicitan que el proceso de firma de garantias se pueda hacer con firma digital, hoy no existe esa opcion en la plataforma.</div>"
+  },
+  {
+    "id": 2003,
+    "subject": "Solicitud de nueva funcionalidad - firma digital",
+    "requester": {
+      "id": 2003,
+      "title": "Manuela Prieto",
+      "email": "mprieto@cooperativa-ejemplo.coop",
+      "role": "End-User"
+    },
+    "status": "Nuevo",
+    "category": null,
+    "priority": "Normal",
+    "tags": [
+      {
+        "title": "CooperativaEjemplo",
+        "id": 2003
+      }
+    ],
+    "firstComment": "<div>Buenas, desde Cooperativa Ejemplo nos solicitan que el proceso de firma de garantias se pueda hacer con firma digital, hoy no existe esa opcion en la plataforma.</div>"
+  },
+  {
+    "id": 2004,
+    "subject": "Fallo general tras actualizacion",
+    "requester": {
+      "id": 2004,
+      "title": "Laura Fernanda Gómez",
+      "email": "lgomez@cooperativa-ejemplo.coop",
+      "role": "End-User"
+    },
+    "status": "Nuevo",
+    "category": null,
+    "priority": "Normal",
+    "tags": [
+      {
+        "title": "CooperativaEjemplo",
+        "id": 2004
+      }
+    ],
+    "firstComment": "<div>Desde la actualizacion de esta manana varios comercios reportan que no pueden radicar solicitudes nuevas, parece un problema general de la plataforma, no aislado.</div>"
+  },
+  {
+    "id": 2005,
+    "subject": "Duda sobre requisitos",
+    "requester": {
+      "id": 2005,
+      "title": "Diana Marcela Ruiz",
+      "email": "druiz@ejemplo-edu.co",
+      "role": "End-User"
+    },
+    "status": "Nuevo",
+    "category": null,
+    "priority": "Normal",
+    "tags": [
+      {
+        "title": "UniversidadEjemplo",
+        "id": 2005
+      }
+    ],
+    "firstComment": "<div>Buenas, tengo una duda sobre que documentos necesito para renovar mi garantia en Universidad Ejemplo, me pueden confirmar el listado?</div>"
+  },
+  {
+    "id": 2006,
+    "subject": "Solicitud de reporte automatico",
+    "requester": {
+      "id": 2006,
+      "title": "Andrés Felipe Rojas",
+      "email": "arojas@ejemplo-edu.co",
+      "role": "End-User"
+    },
+    "status": "Nuevo",
+    "category": null,
+    "priority": "Normal",
+    "tags": [
+      {
+        "title": "FondoSolidarioEjemplo",
+        "id": 2006
+      }
+    ],
+    "firstComment": "<div>Quisieramos saber si es posible generar un reporte automatico mensual de cartera para Fondo Solidario Ejemplo, hoy toca pedirlo manualmente cada mes. Si no existe, dejarlo como requerimiento formal.</div>"
+  },
+  {
+    "id": 2007,
+    "subject": "Plataforma caida - varios usuarios afectados",
+    "requester": {
+      "id": 2007,
+      "title": "Manuela Prieto",
+      "email": "mprieto@cooperativa-ejemplo.coop",
+      "role": "End-User"
+    },
+    "status": "Nuevo",
+    "category": null,
+    "priority": "Normal",
+    "tags": [
+      {
+        "title": "InstitutoTécnicoModelo",
+        "id": 2007
+      }
+    ],
+    "firstComment": "<div>Buen dia, nos estan reportando desde varias sedes que la plataforma de radicacion no carga desde hace 40 minutos. Ya son mas de 10 solicitantes afectados en Instituto Técnico Modelo y otros convenios. Por favor revisar con urgencia.</div>"
+  },
+  {
+    "id": 2008,
+    "subject": "Undeliverable: Mail delivery failed",
+    "requester": {
+      "id": 2008,
+      "title": "Andrés Felipe Rojas",
+      "email": "arojas@correo-ejemplo.com",
+      "role": "End-User"
+    },
+    "status": "Nuevo",
+    "category": null,
+    "priority": "Normal",
+    "tags": [
+      {
+        "title": "FondoSolidarioEjemplo",
+        "id": 2008
+      }
+    ],
+    "firstComment": "<div>This is an automatically generated message. Delivery has failed to these recipients. The following organization rejected your message.</div>"
+  },
+  {
+    "id": 2009,
+    "subject": "Ajuste de fecha de pago",
+    "requester": {
+      "id": 2009,
+      "title": "Mateo Londoño",
+      "email": "mlondoño@cooperativa-ejemplo.coop",
+      "role": "End-User"
+    },
+    "status": "Nuevo",
+    "category": null,
+    "priority": "Normal",
+    "tags": [
+      {
+        "title": "PolitécnicoCentral",
+        "id": 2009
+      }
+    ],
+    "firstComment": "<div>Buen dia, favor ajustar la fecha de pago de la primera cuota de la solicitud 3025003664, el asociado solicita que quede para el dia 15 en vez del dia 5.</div>"
+  },
+  {
+    "id": 2010,
+    "subject": "Duda sobre requisitos",
+    "requester": {
+      "id": 2010,
+      "title": "Camilo Torres",
+      "email": "ctorres@cooperativa-ejemplo.coop",
+      "role": "End-User"
+    },
+    "status": "Nuevo",
+    "category": null,
+    "priority": "Normal",
+    "tags": [
+      {
+        "title": "CorporaciónEducativaAndina",
+        "id": 2010
+      }
+    ],
+    "firstComment": "<div>Buenas, tengo una duda sobre que documentos necesito para renovar mi garantia en Corporación Educativa Andina, me pueden confirmar el listado?</div>"
+  },
+  {
+    "id": 2011,
+    "subject": "Duda sobre requisitos",
+    "requester": {
+      "id": 2011,
+      "title": "Nicolás Vargas",
+      "email": "nvargas@cooperativa-ejemplo.coop",
+      "role": "End-User"
+    },
+    "status": "Nuevo",
+    "category": null,
+    "priority": "Normal",
+    "tags": [
+      {
+        "title": "InstitutoTécnicoModelo",
+        "id": 2011
+      }
+    ],
+    "firstComment": "<div>Buenas, tengo una duda sobre que documentos necesito para renovar mi garantia en Instituto Técnico Modelo, me pueden confirmar el listado?</div>"
+  },
+  {
+    "id": 2012,
+    "subject": "Crear Usuario",
+    "requester": {
+      "id": 2012,
+      "title": "Andrés Felipe Rojas",
+      "email": "arojas@ejemplo-edu.co",
+      "role": "End-User"
+    },
+    "status": "Nuevo",
+    "category": null,
+    "priority": "Normal",
+    "tags": [
+      {
+        "title": "InstitutoTécnicoModelo",
+        "id": 2012
+      }
+    ],
+    "firstComment": "<div>Cordial saludo,</div><div>Solicito crear un usuario para Andrés Felipe Rojas, correo asociado y rol de Agente SAC en Instituto Técnico Modelo.</div>"
+  },
+  {
+    "id": 2013,
+    "subject": "Solicitud de reporte automatico",
+    "requester": {
+      "id": 2013,
+      "title": "Esteban Ariza",
+      "email": "eariza@ejemplo-edu.co",
+      "role": "End-User"
+    },
+    "status": "Nuevo",
+    "category": null,
+    "priority": "Normal",
+    "tags": [
+      {
+        "title": "FondoSolidarioEjemplo",
+        "id": 2013
+      }
+    ],
+    "firstComment": "<div>Quisieramos saber si es posible generar un reporte automatico mensual de cartera para Fondo Solidario Ejemplo, hoy toca pedirlo manualmente cada mes. Si no existe, dejarlo como requerimiento formal.</div>"
+  },
+  {
+    "id": 2014,
+    "subject": "Consulta estado de mi solicitud",
+    "requester": {
+      "id": 2014,
+      "title": "Manuela Prieto",
+      "email": "mprieto@ejemplo-edu.co",
+      "role": "End-User"
+    },
+    "status": "Nuevo",
+    "category": null,
+    "priority": "Normal",
+    "tags": [
+      {
+        "title": "CorporaciónEducativaAndina",
+        "id": 2014
+      }
+    ],
+    "firstComment": "<div>Hola, buenas tardes.</div><div>Queria preguntar en que estado va mi solicitud de credito educativo, la radique hace 2 semanas y no he recibido novedades.</div><div>Gracias.</div>"
+  },
+  {
+    "id": 2015,
+    "subject": "Fallo general tras actualizacion",
+    "requester": {
+      "id": 2015,
+      "title": "Sofía Martínez",
+      "email": "smartinez@cooperativa-ejemplo.coop",
+      "role": "End-User"
+    },
+    "status": "Nuevo",
+    "category": null,
+    "priority": "Normal",
+    "tags": [
+      {
+        "title": "CooperativaEjemplo",
+        "id": 2015
+      }
+    ],
+    "firstComment": "<div>Desde la actualizacion de esta manana varios comercios reportan que no pueden radicar solicitudes nuevas, parece un problema general de la plataforma, no aislado.</div>"
+  },
+  {
+    "id": 2016,
+    "subject": "Crear Usuario",
+    "requester": {
+      "id": 2016,
+      "title": "Paula Andrea Sánchez",
+      "email": "psánchez@ejemplo-edu.co",
+      "role": "End-User"
+    },
+    "status": "Nuevo",
+    "category": null,
+    "priority": "Normal",
+    "tags": [
+      {
+        "title": "FondoSolidarioEjemplo",
+        "id": 2016
+      }
+    ],
+    "firstComment": "<div>Cordial saludo,</div><div>Solicito crear un usuario para Paula Andrea Sánchez, correo asociado y rol de Agente SAC en Fondo Solidario Ejemplo.</div>"
+  },
+  {
+    "id": 2017,
+    "subject": "Solicitud de reporte automatico",
+    "requester": {
+      "id": 2017,
+      "title": "Tomás Guzmán",
+      "email": "tguzmán@cooperativa-ejemplo.coop",
+      "role": "End-User"
+    },
+    "status": "Nuevo",
+    "category": null,
+    "priority": "Normal",
+    "tags": [
+      {
+        "title": "InstitutoTécnicoModelo",
+        "id": 2017
+      }
+    ],
+    "firstComment": "<div>Quisieramos saber si es posible generar un reporte automatico mensual de cartera para Instituto Técnico Modelo, hoy toca pedirlo manualmente cada mes. Si no existe, dejarlo como requerimiento formal.</div>"
+  },
+  {
+    "id": 2018,
+    "subject": "Solicitud de reporte automatico",
+    "requester": {
+      "id": 2018,
+      "title": "Santiago Cárdenas",
+      "email": "scárdenas@ejemplo-edu.co",
+      "role": "End-User"
+    },
+    "status": "Nuevo",
+    "category": null,
+    "priority": "Normal",
+    "tags": [
+      {
+        "title": "UniversidadEjemplo",
+        "id": 2018
+      }
+    ],
+    "firstComment": "<div>Quisieramos saber si es posible generar un reporte automatico mensual de cartera para Universidad Ejemplo, hoy toca pedirlo manualmente cada mes. Si no existe, dejarlo como requerimiento formal.</div>"
+  }
+]

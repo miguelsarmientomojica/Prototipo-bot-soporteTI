@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sala de control — Clasificador IA de tickets</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar__title">
+    <span class="topbar__eyebrow">Credyty · Soporte TI</span>
+    <h1>Sala de control del clasificador</h1>
+  </div>
+  <div class="topbar__stats" id="stats">
+    <div class="stat">
+      <span class="stat__value" id="stat-total">0</span>
+      <span class="stat__label">tickets procesados</span>
+    </div>
+    <div class="stat stat--teal">
+      <span class="stat__value" id="stat-auto">0</span>
+      <span class="stat__label">auto-clasificados</span>
+    </div>
+    <div class="stat stat--amber">
+      <span class="stat__value" id="stat-revision">0</span>
+      <span class="stat__label">a revisión</span>
+    </div>
+  </div>
+</header>
+
+<nav class="tabs">
+  <button class="tab tab--active" data-view="llegada">En llegada</button>
+  <button class="tab" data-view="tabla">Todos los tickets</button>
+</nav>
+
+<main class="layout">
+
+  <!-- ===================== VISTA: EN LLEGADA (feed en vivo) ===================== -->
+  <section class="view view--active" id="view-llegada">
+    <div class="feed-panel">
+      <div class="feed-panel__controls">
+        <button id="btn-generar" class="btn btn--primary">Generar ticket</button>
+        <label class="switch">
+          <input type="checkbox" id="chk-auto">
+          <span class="switch__track"><span class="switch__thumb"></span></span>
+          <span class="switch__label">Modo automático (cada 5 s)</span>
+        </label>
+        <button id="btn-toggle-manual" class="btn btn--ghost">+ Ticket manual</button>
+        <button id="btn-reiniciar" class="btn btn--ghost">Reiniciar</button>
+      </div>
+
+      <form id="form-manual" class="manual-form" hidden>
+        <p class="manual-form__hint">
+          Simula a alguien de la empresa redireccionando o escalando un caso reportado por
+          un comercio, tal como llegaría por correo. La prioridad siempre entra en
+          <strong>Normal</strong> — no es un campo que tú elijas, igual que en el sistema real.
+        </p>
+        <div class="manual-form__row">
+          <label>Asunto
+            <input type="text" id="man-subject" placeholder="Ej. Urgente - Cambio estado solicitud 30250009981" required>
+          </label>
+        </div>
+        <div class="manual-form__row">
+          <label>Cuerpo del ticket
+            <textarea id="man-body" rows="4" placeholder="Escribe el contenido tal como lo redactaría el solicitante…" required></textarea>
+          </label>
+        </div>
+        <div class="manual-form__row manual-form__row--split">
+          <label>Nombre del solicitante
+            <input type="text" id="man-solicitante" placeholder="Ej. Coordinador Comercial Ejemplo">
+          </label>
+          <label>Rol
+            <select id="man-rol">
+              <option value="Member">Miembro interno del comercio (Member)</option>
+              <option value="End-User">Usuario final (End-User)</option>
+            </select>
+          </label>
+        </div>
+        <div class="manual-form__row manual-form__row--split">
+          <label>Comercio / convenio
+            <select id="man-comercio"></select>
+          </label>
+          <div class="manual-form__submit">
+            <button type="submit" class="btn btn--primary">Enviar ticket</button>
+          </div>
+        </div>
+      </form>
+
+      <div class="feed" id="feed">
+        <p class="feed__empty" id="feed-empty">Los tickets nuevos aparecerán aquí a medida que se generan y clasifican.</p>
+      </div>
+    </div>
+
+    <aside class="side-panel">
+      <div class="panel">
+        <h2>Distribución por categoría</h2>
+        <div id="chart-categorias" class="bars"></div>
+      </div>
+      <div class="panel">
+        <h2>Acción recomendada</h2>
+        <div id="chart-acciones" class="bars"></div>
+      </div>
+      <div class="panel panel--legend">
+        <h2>Cómo leer el sello</h2>
+        <div class="legend-item"><span class="stamp stamp--teal stamp--mini">Pedido</span> Confianza alta → se actuaría solo</div>
+        <div class="legend-item"><span class="stamp stamp--amber stamp--mini">Incidente</span> Confianza media → revisión normal</div>
+        <div class="legend-item"><span class="stamp stamp--coral stamp--mini">Problema</span> Confianza baja → revisión prioritaria</div>
+      </div>
+    </aside>
+  </section>
+
+  <!-- ===================== VISTA: TODOS LOS TICKETS (tabla + filtros) ===================== -->
+  <section class="view" id="view-tabla">
+    <div class="filters">
+      <div class="filters__group">
+        <label>Categoría</label>
+        <select id="f-categoria"><option value="">Todas</option></select>
+      </div>
+      <div class="filters__group">
+        <label>Comercio</label>
+        <select id="f-comercio"><option value="">Todos</option></select>
+      </div>
+      <div class="filters__group">
+        <label>Prioridad</label>
+        <select id="f-prioridad"><option value="">Todas</option></select>
+      </div>
+      <div class="filters__group">
+        <label>Responsable</label>
+        <select id="f-responsable"><option value="">Todos</option></select>
+      </div>
+      <div class="filters__group">
+        <label>Acción</label>
+        <select id="f-accion">
+          <option value="">Todas</option>
+          <option value="auto_update">Auto-clasificado</option>
+          <option value="revision_normal">Revisión normal</option>
+          <option value="revision_prioritaria">Revisión prioritaria</option>
+        </select>
+      </div>
+      <div class="filters__group">
+        <label>Confianza mínima <span id="f-confianza-val">0%</span></label>
+        <input type="range" id="f-confianza" min="0" max="100" value="0" step="5">
+      </div>
+      <div class="filters__group filters__group--search">
+        <label>Buscar en asunto</label>
+        <input type="text" id="f-busqueda" placeholder="Ej. documento, plataforma…">
+      </div>
+      <button id="btn-limpiar-filtros" class="btn btn--ghost">Limpiar filtros</button>
+      <span class="filters__count" id="filters-count"></span>
+    </div>
+
+    <div class="table-wrap">
+      <table class="tickets-table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Origen</th>
+            <th>Asunto</th>
+            <th>Categoría</th>
+            <th>Confianza</th>
+            <th>Prioridad</th>
+            <th>Comercio</th>
+            <th>Vence</th>
+            <th>Responsable</th>
+            <th>Info.</th>
+            <th>Acción</th>
+          </tr>
+        </thead>
+        <tbody id="tabla-body">
+          <tr><td colspan="11" class="tabla__empty">Aún no hay tickets procesados en esta sesión.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="pagination">
+      <button id="btn-pag-anterior" class="btn btn--ghost" disabled>← Anterior</button>
+      <span id="pag-info" class="pagination__info">0 de 0</span>
+      <button id="btn-pag-siguiente" class="btn btn--ghost" disabled>Siguiente →</button>
+    </div>
+  </section>
+
+</main>
+
+<template id="tpl-ticket">
+  <article class="ticket-card">
+    <div class="ticket-card__header">
+      <span class="ticket-card__id"></span>
+      <span class="ticket-card__origen"></span>
+      <span class="ticket-card__status status--nuevo">Nuevo</span>
+    </div>
+    <h3 class="ticket-card__subject"></h3>
+    <p class="ticket-card__meta"></p>
+    <p class="ticket-card__body"></p>
+    <div class="ticket-card__result"></div>
+  </article>
+</template>
+
+<script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>

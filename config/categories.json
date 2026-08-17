@@ -1,0 +1,51 @@
+{
+  "_comment": "Taxonomia REAL de Credyty (confirmada por Miguel Sarmiento, soporte nivel 1). Los 'id' coinciden EXACTAMENTE con el string que Plumsail espera en el campo 'category'.",
+  "categories": [
+    {
+      "id": "Pregunta",
+      "label": "Pregunta",
+      "description": "Es solo una consulta del solicitante, sin que haya un bloqueo, error, ni una solicitud de cambio o desarrollo.",
+      "default_priority": "Baja"
+    },
+    {
+      "id": "Incidente",
+      "label": "Incidente",
+      "description": "Una falla aislada o un bloqueante que afecta a una sola solicitud o a pocas solicitudes puntuales (no una caida general).",
+      "default_priority": "Normal"
+    },
+    {
+      "id": "Problema",
+      "label": "Problema",
+      "description": "Una incidencia que bloquea muchas solicitudes o representa una falla general: caidas de servidor, fallas de un proveedor, o consecuencia de un mal deploy que afecta a varios comercios/convenios a la vez.",
+      "default_priority": "Alta"
+    },
+    {
+      "id": "Pedido",
+      "label": "Pedido",
+      "description": "Se solicita un ajuste sobre algo que YA EXISTE: cambio de datos, cambio de estado de una solicitud/garantia, parametrizacion, creacion de usuarios, etc. No implica desarrollar nada nuevo.",
+      "default_priority": "Normal"
+    },
+    {
+      "id": "Requerimiento",
+      "label": "Requerimiento",
+      "description": "Se solicita o se pide estimar un desarrollo nuevo, o una funcionalidad que HOY NO EXISTE para ese comercio/convenio. Suele tener formato de requerimiento formal.",
+      "default_priority": "Baja"
+    },
+    {
+      "id": "No soporte",
+      "label": "No soporte",
+      "description": "El correo/ticket no es realmente una solicitud de soporte: correos automaticos de NoReply, alertas de excepcion no controlada, notificaciones de sistemas, spam, etc.",
+      "default_priority": "Baja"
+    }
+  ],
+  "confidence_thresholds": {
+    "high": 0.85,
+    "comment_high": "Igual o superior a este valor -> se intenta actualizar el campo 'category' del ticket directamente en Plumsail (PATCH). Requiere API key con permisos de escritura.",
+    "low": 0.5,
+    "comment_low": "Por debajo de este valor -> se deja para revision manual prioritaria en el Excel/SharePoint. Entre low y high -> se deja como sugerencia normal, sin marcar prioridad alta de revision."
+  },
+  "priority_guidance": {
+    "_comment": "Politica confirmada por el equipo de soporte: ser estrictos con Alta/Urgente porque afectan los ANS. NO se debe sugerir Alta o Urgente solo porque el asunto/cuerpo del ticket diga la palabra 'urgente' -- solo si el bloqueo real lo justifica.",
+    "valores_validos": ["Baja", "Normal", "Alta", "Urgente"]
+  }
+}
